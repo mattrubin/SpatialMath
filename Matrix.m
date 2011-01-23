@@ -74,37 +74,6 @@
 }
 
 
-/*
-- (id)initWithMatrix:(Matrix*)m
-{
-	if((self = [super init])){
-		rows = m.rows;
-		columns = m.columns;
-		elements = malloc(sizeof(double)*rows*columns);
-		memcpy(elements, m.elements, sizeof(double)*rows*columns);
-	}
-	return self;
-}*/
-
-- (NSString*)description{
-	NSMutableString* str = [NSMutableString new];
-	[str appendString:@"{"];
-	for(NSUInteger i = 0; i < rows; i++){
-		[str appendString:@"{"];
-		for(NSUInteger j = 0; j < columns; j++){
-			[str appendFormat:@"%g", elements[i*columns+j]];
-			if(j+1 != columns)
-				[str appendString:@","];
-		}
-		[str appendString:@"}"];
-		if(i+1 != rows)
-			[str appendString:@",\n"];
-	}
-	[str appendString:@"}"];
-	[str autorelease];
-	return str;
-}
-
 + (id)matrixWithRows:(NSUInteger)r columns:(NSUInteger)c {
 	return [[[Matrix alloc] initWithRows:r columns:c] autorelease];
 }
@@ -126,4 +95,38 @@
 }
 
 
+- (NSString*)description{
+	NSMutableString* str = [NSMutableString new];
+	[str appendString:@"{"];
+	for(NSUInteger i = 0; i < rows; i++){
+		[str appendString:@"{"];
+		for(NSUInteger j = 0; j < columns; j++){
+			[str appendFormat:@"%g", elements[i*columns+j]];
+			if(j+1 != columns)
+				[str appendString:@","];
+		}
+		[str appendString:@"}"];
+		if(i+1 != rows)
+			[str appendString:@",\n"];
+	}
+	[str appendString:@"}"];
+	[str autorelease];
+	return str;
+}
+
+- (bool)isSquare
+{
+	return rows==columns;
+}
+
+
+- (bool)isSymmetric
+{
+	for(NSUInteger r=1; r<rows; r++){
+		for(NSUInteger c=0; c<r; c++){
+			if(elements[r*columns+c]!=elements[c*columns+r]) return FALSE;
+		}
+	}
+	return TRUE;
+}
 @end

@@ -32,4 +32,7 @@
 + (id)matrixWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)r column:(NSUInteger)c;
 + (id)identityMatrixWithSize:(NSUInteger)size;
 
+- (bool)isSquare;
+- (bool)isSymmetric;
+
 @end
