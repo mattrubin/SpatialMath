@@ -32,6 +32,7 @@
 + (id)identityMatrixWithSize:(NSUInteger)size;
 
 - (bool)isSquare;
+- (bool)isDiagonal;
 - (bool)isSymmetric;
 - (bool)isEqualToMatrix:(Matrix *)matrix;
 - (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;

@@ -119,6 +119,18 @@
 	return rows==columns;
 }
 
+- (bool)isDiagonal
+{
+	if(rows!=columns) return FALSE;
+	
+	for(NSUInteger r=1; r<rows; r++){
+		for(NSUInteger c=0; c<r; c++){
+			if(elements[r*columns+c]!=0 || elements[c*columns+r]!=0) return FALSE;
+		}
+	}
+	return TRUE;
+}
+
 - (bool)isSymmetric
 {
 	if(rows!=columns) return FALSE;
