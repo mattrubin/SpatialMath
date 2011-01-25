@@ -19,7 +19,6 @@
 @property (readonly) NSUInteger rows;
 @property (readonly) NSUInteger columns;
 
-
 - (id)initWithRows:(NSUInteger)r columns:(NSUInteger)c;
 - (id)initWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;
 - (id)initWithMatrix:(Matrix*)m;
@@ -34,5 +33,18 @@
 
 - (bool)isSquare;
 - (bool)isSymmetric;
+
+@end
+
+
+@interface Matrix (MatrixOperations)
+
+- (Matrix*)multiplyByMatrix:(Matrix*)matrix;
+
+//- (double)determinant;
+
+//- (Matrix*)inverse;
+
+- (Matrix*)transpose;
 
 @end
