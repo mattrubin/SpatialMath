@@ -129,4 +129,15 @@
 	}
 	return TRUE;
 }
+
+- (bool)isEqualToMatrix:(Matrix *)matrix
+{
+	return (self.rows==matrix.rows && self.columns==matrix.columns && memcmp(self.elements, matrix.elements, sizeof(double)*self.rows*self.columns)==0);
+}
+
+- (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c
+{
+	return (self.rows==r && self.columns==c && memcmp(self.elements, e, sizeof(double)*self.rows*self.columns)==0);
+}
+
 @end
