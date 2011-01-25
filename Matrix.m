@@ -97,19 +97,19 @@
 
 - (NSString*)description{
 	NSMutableString* str = [NSMutableString new];
-	[str appendString:@"{"];
-	for(NSUInteger i = 0; i < rows; i++){
-		[str appendString:@"{"];
-		for(NSUInteger j = 0; j < columns; j++){
-			[str appendFormat:@"%g", elements[i*columns+j]];
-			if(j+1 != columns)
+	[str appendString:@"Matrix:\n"];
+	for(NSUInteger r = 0; r < rows; r++){
+		[str appendString:@"["];
+		for(NSUInteger c = 0; c < columns; c++){
+			[str appendFormat:@"%g", elements[c*rows+r]];
+			if(c+1 != columns)
 				[str appendString:@","];
 		}
-		[str appendString:@"}"];
-		if(i+1 != rows)
-			[str appendString:@",\n"];
+		[str appendString:@"]"];
+		if(r+1 != rows)
+			[str appendString:@"\n"];
 	}
-	[str appendString:@"}"];
+	[str appendString:@""];
 	[str autorelease];
 	return str;
 }
