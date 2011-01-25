@@ -42,9 +42,9 @@
 	return [self initWithElements:m.elements rows:m.rows columns:m.columns];
 }
 
-- (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)r column:(NSUInteger)c
+- (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)row column:(NSUInteger)column
 {
-	if(m.rows<2 || m.columns<2 || r<0 || r>=m.rows || c<0 || c>=m.columns){
+	if(m.rows<2 || m.columns<2 || row<0 || row>=m.rows || column<0 || column>=m.columns){
 		[self release];
 		return nil;
 	}
@@ -53,10 +53,10 @@
 		columns = m.columns-1;
 		elements = malloc(sizeof(double)*rows*columns);
 		NSUInteger index = 0;
-		for(NSUInteger i=0; i<m.rows; i++){
-			for(NSUInteger j=0; j<m.columns; j++){
-				if(i!=r && j!=c)
-					elements[index++] = m.elements[i*m.columns + j];
+		for(NSUInteger c=0; c<m.columns; c++){
+			for(NSUInteger r=0; r<m.rows; r++){
+				if(r!=row && c!=column)
+					elements[index++] = m.elements[c*m.rows + r];
 			}
 		}
 	}
