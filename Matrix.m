@@ -121,6 +121,8 @@
 
 - (bool)isSymmetric
 {
+	if(rows!=columns) return FALSE;
+	
 	for(NSUInteger r=1; r<rows; r++){
 		for(NSUInteger c=0; c<r; c++){
 			if(elements[r*columns+c]!=elements[c*columns+r]) return FALSE;
