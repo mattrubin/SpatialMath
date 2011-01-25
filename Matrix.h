@@ -42,6 +42,10 @@
 @interface Matrix (MatrixOperations)
 
 - (Matrix*)multiplyByMatrix:(Matrix*)matrix;
+- (Matrix*)multiplyByScalar:(double)scalar;
+- (Matrix*)addScalar:(double)scalar;
+- (Matrix*)addMatrix:(Matrix*)matrix;
+- (Matrix*)directSumWithMatrix:(Matrix*)matrix;
 
 //- (double)determinant;
 

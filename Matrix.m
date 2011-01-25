@@ -119,7 +119,6 @@
 	return rows==columns;
 }
 
-
 - (bool)isSymmetric
 {
 	for(NSUInteger r=1; r<rows; r++){

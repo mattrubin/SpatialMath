@@ -37,5 +37,54 @@
 	return result;
 }
 
+- (Matrix*)multiplyByScalar:(double)scalar{
+	Matrix* result = [Matrix matrixWithRows:rows columns:columns];
+	for(NSUInteger r=0; r<rows; r++){
+		for(NSUInteger c=0; c<columns; c++){
+			result.elements[c*rows+r] = elements[c*rows+r]*scalar;
+		}
+	}
+	return result;
+}
+
+- (Matrix*)addScalar:(double)scalar{
+	Matrix* result = [Matrix matrixWithRows:rows columns:columns];
+	for(NSUInteger r=0; r<rows; r++){
+		for(NSUInteger c=0; c<columns; c++){
+			result.elements[c*rows+r] = elements[c*rows+r]+scalar;
+		}
+	}
+	return result;
+}
+
+
+- (Matrix*)addMatrix:(Matrix*)matrix{
+	if(columns != matrix.columns || rows != matrix.rows) return nil;
+	
+	Matrix* result = [Matrix matrixWithRows:rows columns:matrix.columns];
+	for(NSUInteger r=0; r<rows; r++){
+		for(NSUInteger c=0; c<columns; c++){
+			result.elements[c*rows+r] = elements[c*rows+r] + matrix.elements[c*rows+r];
+		}
+	}
+	return result;
+}
+
+- (Matrix*)directSumWithMatrix:(Matrix*)B{
+	Matrix *A = self;
+	Matrix* result = [Matrix matrixWithRows:A.rows+B.rows columns:A.columns+B.columns];
+	for(NSUInteger r=0; r<A.rows; r++){
+		for(NSUInteger c=0; c<A.columns; c++){
+			result.elements[c*result.rows+r] = A.elements[c*A.rows+r];
+		}
+	}
+	for(NSUInteger r=0; r<B.rows; r++){
+		for(NSUInteger c=0; c<B.columns; c++){
+			result.elements[(A.columns+c)*result.rows+(A.rows+r)] = B.elements[c*B.rows+r];
+		}
+	}
+	return result;
+}
+
 
 @end
