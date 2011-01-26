@@ -153,4 +153,29 @@
 	return (self.rows==r && self.columns==c && memcmp(self.elements, e, sizeof(double)*self.rows*self.columns)==0);
 }
 
+
+- (Matrix*)row:(NSUInteger)r
+{
+	Matrix* m = [Matrix matrixWithRows:1 columns:self.columns];
+	for(NSUInteger c=0; c<self.columns; c++){
+		m.elements[c] = self.elements[c*self.rows+r];
+	}
+	return m;
+}
+
+- (Matrix*)column:(NSUInteger)c;
+{
+	Matrix* m = [Matrix matrixWithRows:self.rows columns:1];
+	for(NSUInteger r=0; r<self.rows; r++){
+		m.elements[r] = self.elements[c*self.rows+r];
+	}
+	return m;
+}
+
+- (double)elementAtRow:(NSUInteger)r column:(NSUInteger)c
+{
+	return self.elements[c*self.rows+r];
+}
+
+
 @end

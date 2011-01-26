@@ -37,6 +37,10 @@
 - (bool)isEqualToMatrix:(Matrix *)matrix;
 - (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;
 
+- (Matrix*)row:(NSUInteger)r;
+- (Matrix*)column:(NSUInteger)c;
+- (double)elementAtRow:(NSUInteger)r column:(NSUInteger)c;
+
 @end
 
 
