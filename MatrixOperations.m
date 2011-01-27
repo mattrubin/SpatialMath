@@ -30,7 +30,7 @@
 		for(NSUInteger c=0; c<matrix.columns; c++){
 			double sum = 0.0;
 			for(NSUInteger k=0; k<columns; k++)
-				sum += elements[r+k*columns] * matrix.elements[c*matrix.rows+k];
+				sum += elements[r+k*rows] * matrix.elements[c*matrix.rows+k];
 			result.elements[c*rows+r] = sum;
 		}
 	}
