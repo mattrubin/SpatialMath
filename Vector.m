@@ -84,9 +84,20 @@
 	return [self isEqualToElements:e rows:d columns:1];
 }
 
+
+#pragma mark Accessors
 - (double)element:(NSUInteger)d
 {
 	return [self elementAtRow:d column:1];
+}
+
+- (Vector*)versor
+{
+	double l = self.length;
+	Vector *vector = [Vector vectorWithVector:self];
+	for(NSUInteger i=0; i<vector.dimensions; i++)
+		vector.elements[i] /= l;
+	return vector;
 }
 
 

@@ -32,6 +32,8 @@
 
 - (double)element:(NSUInteger)d;
 
+- (Vector*)versor;
+
 @end
 
 @interface Vector (VectorOperations)
