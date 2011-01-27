@@ -16,6 +16,13 @@
 {
 	return self.rows;
 }
+- (double)length
+{
+	double sum = 0.0;
+	for(NSUInteger i=0; i<self.dimensions; i++)
+		sum += elements[i]*elements[i];
+	return sqrt(sum);
+}
 
 
 #pragma mark Initializers
@@ -59,14 +66,15 @@
 #pragma mark Boolean Properties
 - (bool)isUnitVector
 {
-	double sum = 0.0;
-	for(NSUInteger r=0; r<rows; r++)
-		sum += elements[r]*elements[r];
-	return sqrt(sum)==1;
+	return self.length==1;
 }
 
 
 #pragma mark Comparison Functions
+- (bool)isOrthogonalToVector:(Vector*)v
+{
+	return [self dotProduct:v]==0;
+}
 - (bool)isEqualToVector:(Vector *)vector
 {
 	return [self isEqualToMatrix:vector];

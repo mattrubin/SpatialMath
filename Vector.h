@@ -25,9 +25,11 @@
 + (id)vectorWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d;
 
 - (bool)isUnitVector;
+- (bool)isOrthogonalToVector:(Vector*)v;
 - (bool)isEqualToVector:(Vector *)vector;
 - (bool)isEqualToElements:(double*)e dimensions:(NSUInteger)d;
 
+- (double)length;
 - (double)element:(NSUInteger)d;
 
 @end
