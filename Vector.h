@@ -13,6 +13,7 @@
 
 }
 @property (readonly) NSUInteger dimensions;
+@property (readonly) double length;
 
 - (id)initWithDimensions:(NSUInteger)d;
 - (id)initWithDimensions:(NSUInteger)d elements:(double*)e;
@@ -29,7 +30,6 @@
 - (bool)isEqualToVector:(Vector *)vector;
 - (bool)isEqualToElements:(double*)e dimensions:(NSUInteger)d;
 
-- (double)length;
 - (double)element:(NSUInteger)d;
 
 @end
