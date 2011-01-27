@@ -31,3 +31,9 @@
 - (double)element:(NSUInteger)d;
 
 @end
+
+@interface Vector (VectorOperations)
+
+- (double)dotProduct:(Vector*)vector;
+
+@end
