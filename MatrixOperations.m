@@ -16,7 +16,7 @@
 	double buffer[columns*rows];
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<columns; c++)
-			buffer[c*rows+r] = elements[r*columns+c];
+			buffer[r*columns+c] = elements[c*rows+r];
 	}
 	Matrix* result = [Matrix matrixWithElements:buffer rows:columns columns:rows];
 	return result;
