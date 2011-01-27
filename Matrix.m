@@ -13,6 +13,8 @@
 
 @synthesize elements, rows, columns;
 
+
+#pragma mark Initializers
 - (id)initWithRows:(NSUInteger)r columns:(NSUInteger)c
 {
 	if(r==0 || c==0){
@@ -74,6 +76,7 @@
 }
 
 
+#pragma mark Generators
 + (id)matrixWithRows:(NSUInteger)r columns:(NSUInteger)c {
 	return [[[Matrix alloc] initWithRows:r columns:c] autorelease];
 }
@@ -95,25 +98,7 @@
 }
 
 
-- (NSString*)description{
-	NSMutableString* str = [NSMutableString new];
-	[str appendString:@"Matrix:\n"];
-	for(NSUInteger r = 0; r < rows; r++){
-		[str appendString:@"["];
-		for(NSUInteger c = 0; c < columns; c++){
-			[str appendFormat:@"%g", elements[c*rows+r]];
-			if(c+1 != columns)
-				[str appendString:@","];
-		}
-		[str appendString:@"]"];
-		if(r+1 != rows)
-			[str appendString:@"\n"];
-	}
-	[str appendString:@""];
-	[str autorelease];
-	return str;
-}
-
+#pragma mark Boolean Properties
 - (bool)isSquare
 {
 	return rows==columns;
@@ -143,6 +128,8 @@
 	return TRUE;
 }
 
+
+#pragma mark Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix
 {
 	return (self.rows==matrix.rows && self.columns==matrix.columns && memcmp(self.elements, matrix.elements, sizeof(double)*self.rows*self.columns)==0);
@@ -154,6 +141,7 @@
 }
 
 
+#pragma mark Accessors
 - (Matrix*)row:(NSUInteger)r
 {
 	Matrix* m = [Matrix matrixWithRows:1 columns:self.columns];
@@ -177,5 +165,25 @@
 	return self.elements[c*self.rows+r];
 }
 
+
+#pragma mark Utility
+- (NSString*)description{
+	NSMutableString* str = [NSMutableString new];
+	[str appendString:@"Matrix:\n"];
+	for(NSUInteger r = 0; r < rows; r++){
+		[str appendString:@"["];
+		for(NSUInteger c = 0; c < columns; c++){
+			[str appendFormat:@"%g", elements[c*rows+r]];
+			if(c+1 != columns)
+				[str appendString:@","];
+		}
+		[str appendString:@"]"];
+		if(r+1 != rows)
+			[str appendString:@"\n"];
+	}
+	[str appendString:@""];
+	[str autorelease];
+	return str;
+}
 
 @end
