@@ -129,6 +129,21 @@
 	return TRUE;
 }
 
+- (bool)isOrthogonal
+{
+	Vector *v[columns];
+	for(NSUInteger c=0; c<columns; c++){
+		v[c] = [Vector vectorWithDimensions:rows elements:[self column:c].elements];
+		if(![v[c] isUnitVector]) return FALSE;
+	}
+	for(NSUInteger i=0; i<columns-1; i++){
+		for(NSUInteger j=i+1; j<columns; j++){
+			if(![v[i] isOrthogonalToVector:v[j]]) return FALSE;
+		}
+	}
+	return TRUE;
+}
+
 
 #pragma mark Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix
