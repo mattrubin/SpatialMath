@@ -13,6 +13,8 @@
 		C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5BEE12EBA394002E7101 /* Matrix.m */; };
 		C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC5BEF12EBA394002E7101 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CC5C1712EBAB43002E7101 /* MatrixOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */; };
+		C9DCD76D12F1F6B300236C37 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = C9DCD76B12F1F6B300236C37 /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9DCD76E12F1F6B300236C37 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DCD76C12F1F6B300236C37 /* Vector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		C9CC5BEE12EBA394002E7101 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		C9CC5BEF12EBA394002E7101 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixOperations.m; sourceTree = "<group>"; };
+		C9DCD76B12F1F6B300236C37 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		C9DCD76C12F1F6B300236C37 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,7 @@
 		0867D691FE84028FC02AAC07 /* SpatialMath */ = {
 			isa = PBXGroup;
 			children = (
+				C989756512EBBC0B00B831A3 /* SpatialMath.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -86,7 +91,8 @@
 				C9CC5BEF12EBA394002E7101 /* Matrix.h */,
 				C9CC5BEE12EBA394002E7101 /* Matrix.m */,
 				C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */,
-				C989756512EBBC0B00B831A3 /* SpatialMath.h */,
+				C9DCD76B12F1F6B300236C37 /* Vector.h */,
+				C9DCD76C12F1F6B300236C37 /* Vector.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			files = (
 				C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */,
 				C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */,
+				C9DCD76D12F1F6B300236C37 /* Vector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +201,7 @@
 			files = (
 				C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */,
 				C9CC5C1712EBAB43002E7101 /* MatrixOperations.m in Sources */,
+				C9DCD76E12F1F6B300236C37 /* Vector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

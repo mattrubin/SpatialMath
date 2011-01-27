@@ -11,6 +11,7 @@
 
 @implementation Matrix
 
+#pragma mark Properties
 @synthesize elements, rows, columns;
 
 

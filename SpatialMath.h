@@ -9,3 +9,4 @@
 #import <Cocoa/Cocoa.h>
 
 #import "Matrix.h"
+#import "Vector.h"
