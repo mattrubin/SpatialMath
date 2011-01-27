@@ -6,10 +6,10 @@
 //  Copyright 2011 Stanford University. All rights reserved.
 //
 
-#import "VectorOperations.h"
+#import "Vector.h"
 
 
-@implementation VectorOperations
+@implementation Vector (VectorOperations)
 
 - (double)dotProduct:(Vector*)vector
 {
