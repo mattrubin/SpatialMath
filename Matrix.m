@@ -7,7 +7,7 @@
 //
 
 #import "Matrix.h"
-
+#import "Vector.h"
 
 @implementation Matrix
 
