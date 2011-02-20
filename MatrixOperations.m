@@ -87,4 +87,43 @@
 }
 
 
+
+
+
+- (double)cofactorOfRow:(NSUInteger)r column:(NSUInteger)c
+{
+	NSLog(@"calculationg cofactor of (%i,%i) in a %ix%i matrix:", r,c, rows, columns);
+	Matrix *cofactorMatrix = [Matrix matrixWithMatrix:self byRemovingRow:r column:c];
+	NSLog(@"%@", cofactorMatrix);
+	double cofactor = [cofactorMatrix determinant];
+	if((r+c)%2!=0) cofactor *= -1;
+	NSLog(@"     ...%f", cofactor);
+	return cofactor;
+}
+
+double determinant(Matrix *m)
+{
+	double det = 0.0;
+	switch (m.rows) {
+		case 1:
+			return m.elements[0];
+			break;
+		case 2:
+			return m.elements[0]*m.elements[4]-m.elements[3]*m.elements[2];
+			break;
+		default:
+			for(NSUInteger c=0; c<m.columns; c++)
+				det += [m elementAtRow:0 column:c]*[m cofactorOfRow:0 column:c];
+			return det;
+			break;
+	}
+}
+
+- (double)determinant
+{
+	NSAssert([self isSquare], @"Cannot calculate the determinant of a non-square matrix");
+	return determinant(self);
+}
+
+
 @end

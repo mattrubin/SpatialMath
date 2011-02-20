@@ -53,10 +53,11 @@
 - (Matrix*)addMatrix:(Matrix*)matrix;
 - (Matrix*)directSumWithMatrix:(Matrix*)matrix;
 
-//- (double)determinant;
+- (double)determinant;
 
 //- (Matrix*)inverse;
 
 - (Matrix*)transpose;
+- (double)cofactorOfRow:(NSUInteger)r column:(NSUInteger)c;
 
 @end

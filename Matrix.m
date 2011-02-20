@@ -47,6 +47,7 @@
 
 - (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)row column:(NSUInteger)column
 {
+	NSLog(@"Removing row %i and column %i from %@", row, column, m);
 	if(m.rows<2 || m.columns<2 || row<0 || row>=m.rows || column<0 || column>=m.columns){
 		[self release];
 		return nil;
