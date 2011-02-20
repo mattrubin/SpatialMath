@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		C94C34531310740F00EF492B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C34511310740400EF492B /* main.m */; };
-		C94C34BC131074E800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
-		C94C34D11310777B00EF492B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		C94C366E1310985900EF492B /* Test_Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C366D1310985900EF492B /* Test_Matrix.m */; };
+		C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
 		C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */ = {isa = PBXBuildFile; fileRef = C989756512EBBC0B00B831A3 /* SpatialMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5BEE12EBA394002E7101 /* Matrix.m */; };
 		C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC5BEF12EBA394002E7101 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C94C34361310736D00EF492B /* PBXContainerItemProxy */ = {
+		C94C36AA13109D9600EF492B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
@@ -39,8 +38,10 @@
 		32DBCF5E0370ADEE00C91783 /* SpatialMath_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* SpatialMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpatialMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C94C34321310736400EF492B /* SpatialMathTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpatialMathTest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C94C34511310740400EF492B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C94C36671310980400EF492B /* SpatialMathTestBundle.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatialMathTestBundle.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94C36681310980400EF492B /* SpatialMathTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpatialMathTestBundle-Info.plist"; sourceTree = "<group>"; };
+		C94C366C1310985900EF492B /* Test_Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Matrix.h; sourceTree = "<group>"; };
+		C94C366D1310985900EF492B /* Test_Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_Matrix.m; sourceTree = "<group>"; };
 		C989756512EBBC0B00B831A3 /* SpatialMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath.h; sourceTree = "<group>"; };
 		C9CC5BEE12EBA394002E7101 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		C9CC5BEF12EBA394002E7101 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
@@ -60,12 +61,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C94C34301310736400EF492B /* Frameworks */ = {
+		C94C36641310980400EF492B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94C34D11310777B00EF492B /* Cocoa.framework in Frameworks */,
-				C94C34BC131074E800EF492B /* SpatialMath.framework in Frameworks */,
+				C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* SpatialMath.framework */,
-				C94C34321310736400EF492B /* SpatialMathTest */,
+				C94C36671310980400EF492B /* SpatialMathTestBundle.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +109,7 @@
 			children = (
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				C94C36681310980400EF492B /* SpatialMathTestBundle-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -155,9 +156,10 @@
 		C94C3445131073DF00EF492B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C94C34511310740400EF492B /* main.m */,
+				C94C366C1310985900EF492B /* Test_Matrix.h */,
+				C94C366D1310985900EF492B /* Test_Matrix.m */,
 			);
-			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,22 +197,24 @@
 			productReference = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C94C34311310736400EF492B /* SpatialMathTest */ = {
+		C94C36661310980400EF492B /* SpatialMathTestBundle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C94C343C1310738B00EF492B /* Build configuration list for PBXNativeTarget "SpatialMathTest" */;
+			buildConfigurationList = C94C366B1310980400EF492B /* Build configuration list for PBXNativeTarget "SpatialMathTestBundle" */;
 			buildPhases = (
-				C94C342F1310736400EF492B /* Sources */,
-				C94C34301310736400EF492B /* Frameworks */,
+				C94C36621310980400EF492B /* Resources */,
+				C94C36631310980400EF492B /* Sources */,
+				C94C36641310980400EF492B /* Frameworks */,
+				C94C36651310980400EF492B /* Perform Unit Tests */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C94C34371310736D00EF492B /* PBXTargetDependency */,
+				C94C36AB13109D9600EF492B /* PBXTargetDependency */,
 			);
-			name = SpatialMathTest;
-			productName = SpatialMathTest;
-			productReference = C94C34321310736400EF492B /* SpatialMathTest */;
-			productType = "com.apple.product-type.tool";
+			name = SpatialMathTestBundle;
+			productName = SpatialMathTestBundle;
+			productReference = C94C36671310980400EF492B /* SpatialMathTestBundle.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -233,7 +237,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* SpatialMath */,
-				C94C34311310736400EF492B /* SpatialMathTest */,
+				C94C36661310980400EF492B /* SpatialMathTestBundle */,
 			);
 		};
 /* End PBXProject section */
@@ -247,7 +251,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C94C36621310980400EF492B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C94C36651310980400EF492B /* Perform Unit Tests */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Perform Unit Tests";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
@@ -261,21 +289,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C94C342F1310736400EF492B /* Sources */ = {
+		C94C36631310980400EF492B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94C34531310740F00EF492B /* main.m in Sources */,
+				C94C366E1310985900EF492B /* Test_Matrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C94C34371310736D00EF492B /* PBXTargetDependency */ = {
+		C94C36AB13109D9600EF492B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DC2EF4F0486A6940098B216 /* SpatialMath */;
-			targetProxy = C94C34361310736D00EF492B /* PBXContainerItemProxy */;
+			targetProxy = C94C36AA13109D9600EF492B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -356,48 +384,56 @@
 			};
 			name = Release;
 		};
-		C94C34341310736500EF492B /* Debug */ = {
+		C94C36691310980400EF492B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "SpatialMathTestBundle-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
-					Foundation,
+					Cocoa,
 					"-framework",
-					AppKit,
+					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = SpatialMathTest;
+				PRODUCT_NAME = SpatialMathTestBundle;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		C94C34351310736500EF492B /* Release */ = {
+		C94C366A1310980400EF492B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "SpatialMathTestBundle-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
-					Foundation,
+					Cocoa,
 					"-framework",
-					AppKit,
+					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = SpatialMathTest;
+				PRODUCT_NAME = SpatialMathTestBundle;
+				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -423,11 +459,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C94C343C1310738B00EF492B /* Build configuration list for PBXNativeTarget "SpatialMathTest" */ = {
+		C94C366B1310980400EF492B /* Build configuration list for PBXNativeTarget "SpatialMathTestBundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C94C34341310736500EF492B /* Debug */,
-				C94C34351310736500EF492B /* Release */,
+				C94C36691310980400EF492B /* Debug */,
+				C94C366A1310980400EF492B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
