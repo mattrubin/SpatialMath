@@ -7,9 +7,6 @@
 //
 
 #import "Test_Matrix.h"
-#import <SpatialMath/SpatialMath.h>
-
-#define LOOP(max, code) for(int i=0; i<max; i++){ code; }
 
 
 @implementation Test_Matrix

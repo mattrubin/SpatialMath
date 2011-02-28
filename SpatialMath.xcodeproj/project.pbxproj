@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		C947E894131B558A00CEB999 /* Test_MatrixOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C947E893131B558A00CEB999 /* Test_MatrixOperations.m */; };
 		C94C366E1310985900EF492B /* Test_Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C366D1310985900EF492B /* Test_Matrix.m */; };
 		C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
 		C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */ = {isa = PBXBuildFile; fileRef = C989756512EBBC0B00B831A3 /* SpatialMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +39,9 @@
 		32DBCF5E0370ADEE00C91783 /* SpatialMath_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* SpatialMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpatialMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C947E892131B558A00CEB999 /* Test_MatrixOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_MatrixOperations.h; sourceTree = "<group>"; };
+		C947E893131B558A00CEB999 /* Test_MatrixOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_MatrixOperations.m; sourceTree = "<group>"; };
+		C947E89B131B580C00CEB999 /* TestBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBundle.h; sourceTree = "<group>"; };
 		C94C36671310980400EF492B /* SpatialMathTestBundle.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatialMathTestBundle.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94C36681310980400EF492B /* SpatialMathTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpatialMathTestBundle-Info.plist"; sourceTree = "<group>"; };
 		C94C366C1310985900EF492B /* Test_Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Matrix.h; sourceTree = "<group>"; };
@@ -156,8 +160,11 @@
 		C94C3445131073DF00EF492B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				C947E89B131B580C00CEB999 /* TestBundle.h */,
 				C94C366C1310985900EF492B /* Test_Matrix.h */,
 				C94C366D1310985900EF492B /* Test_Matrix.m */,
+				C947E892131B558A00CEB999 /* Test_MatrixOperations.h */,
+				C947E893131B558A00CEB999 /* Test_MatrixOperations.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -294,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94C366E1310985900EF492B /* Test_Matrix.m in Sources */,
+				C947E894131B558A00CEB999 /* Test_MatrixOperations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

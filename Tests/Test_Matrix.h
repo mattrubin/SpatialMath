@@ -6,7 +6,7 @@
 //  Copyright 2011 Matt Rubin. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "TestBundle.h"
 
 
 @interface Test_Matrix : SenTestCase {
