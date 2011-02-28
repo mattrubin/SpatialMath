@@ -145,6 +145,10 @@
 	return TRUE;
 }
 
+- (bool)isInvertible
+{
+	return [self determinant]!=0;
+}
 
 #pragma mark Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix
