@@ -88,6 +88,8 @@
 	for(int i = 0; i < rows*columns; i++){
 		STAssertEquals(m.elements[i], 0.0, @"Elements must initialize to zero (Failed for element %i)", i);
 	}
+	
+	[m release];
 }
 - (void) initWithElements_rows_columns {
 	NSUInteger rows = arc4random()%20 + 1;
@@ -101,6 +103,8 @@
 	for(int i = 0; i < rows*columns; i++){
 		STAssertEquals(m.elements[i], buffer[i], @"Elements must initialize to zero (Failed for element %i)", i);
 	}
+	
+	[m release];
 }
 - (void) initWithMatrix {
 	NSUInteger rows = arc4random()%20 + 1;
@@ -115,6 +119,9 @@
 	for(int i = 0; i < rows*columns; i++){
 		STAssertEquals(n.elements[i], buffer[i], @"Elements must initialize to zero (Failed for element %i)", i);
 	}
+	
+	[m release];
+	[n release];
 }
 - (void) initWithMatrix_byRemovingRow_column {}
 - (void) initIdentityMatrixWithSize {}
