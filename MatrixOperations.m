@@ -109,7 +109,7 @@ double determinant(Matrix *m)
 			return m.elements[0];
 			break;
 		case 2:
-			return m.elements[0]*m.elements[4]-m.elements[3]*m.elements[2];
+			return m.elements[0]*m.elements[3]-m.elements[2]*m.elements[1];
 			break;
 		default:
 			for(NSUInteger c=0; c<m.columns; c++)
