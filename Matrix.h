@@ -36,6 +36,7 @@
 - (bool)isSymmetric;
 - (bool)isOrthogonal;
 - (bool)isInvertible;
+- (bool)isZero;
 
 - (bool)isEqualToMatrix:(Matrix *)matrix;
 - (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;

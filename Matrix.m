@@ -150,6 +150,17 @@
 	return [self determinant]!=0;
 }
 
+- (bool)isZero
+{
+	for(NSUInteger r=0; r<rows; r++){
+		for(NSUInteger c=0; c<columns; c++){
+			if([self elementAtRow:r column:c]!=0) return FALSE;
+		}
+	}
+	return TRUE;
+}
+
+
 #pragma mark Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix
 {
