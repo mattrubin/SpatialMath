@@ -95,23 +95,23 @@
 
 #pragma mark Generators
 + (id)matrixWithRows:(NSUInteger)r columns:(NSUInteger)c {
-	return [[[Matrix alloc] initWithRows:r columns:c] autorelease];
+	return [[[[self class] alloc] initWithRows:r columns:c] autorelease];
 }
 
 + (id)matrixWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c {
-	return [[[Matrix alloc] initWithElements:e rows:r columns:c] autorelease];
+	return [[[[self class] alloc] initWithElements:e rows:r columns:c] autorelease];
 }
 
 + (id)matrixWithMatrix:(Matrix*)m {
-	return [[[Matrix alloc] initWithMatrix:m] autorelease];
+	return [[[[self class] alloc] initWithMatrix:m] autorelease];
 }
 
 + (id)matrixWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)r column:(NSUInteger)c {
-	return [[[Matrix alloc] initWithMatrix:m byRemovingRow:r column:c] autorelease];
+	return [[[[self class] alloc] initWithMatrix:m byRemovingRow:r column:c] autorelease];
 }
 
 + (id)identityMatrixWithSize:(NSUInteger)size {
-	return [[[Matrix alloc] initIdentityMatrixWithSize:size] autorelease];
+	return [[[[self class] alloc] initIdentityMatrixWithSize:size] autorelease];
 }
 
 
