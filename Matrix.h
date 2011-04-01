@@ -19,18 +19,21 @@
 @property (readonly) NSUInteger rows;
 @property (readonly) NSUInteger columns;
 
-- (id)initWithRows:(NSUInteger)r columns:(NSUInteger)c;
-- (id)initWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;
-- (id)initWithMatrix:(Matrix*)m;
-- (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)r column:(NSUInteger)c;
+// Initializers
+- (id)initWithRows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
+- (id)initWithElements:(double*)elementArray rows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
+- (id)initWithMatrix:(Matrix*)matrix;
+- (id)initWithMatrix:(Matrix*)matrix byRemovingRow:(NSUInteger)rowNumber column:(NSUInteger)columnNumber;
 - (id)initIdentityMatrixWithSize:(NSUInteger)size;
 
-+ (id)matrixWithRows:(NSUInteger)r columns:(NSUInteger)c;
-+ (id)matrixWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;
-+ (id)matrixWithMatrix:(Matrix*)m;
-+ (id)matrixWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)r column:(NSUInteger)c;
+// Generators
++ (id)matrixWithRows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
++ (id)matrixWithElements:(double*)elementArray rows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
++ (id)matrixWithMatrix:(Matrix*)matrix;
++ (id)matrixWithMatrix:(Matrix*)matrix byRemovingRow:(NSUInteger)rowNumber column:(NSUInteger)columnNumber;
 + (id)identityMatrixWithSize:(NSUInteger)size;
 
+// Boolean Properties
 - (bool)isSquare;
 - (bool)isDiagonal;
 - (bool)isSymmetric;
@@ -38,12 +41,14 @@
 - (bool)isInvertible;
 - (bool)isZero;
 
+// Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix;
-- (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c;
+- (bool)isEqualToElements:(double*)elementArray rows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
 
-- (Matrix*)row:(NSUInteger)r;
-- (Matrix*)column:(NSUInteger)c;
-- (double)elementAtRow:(NSUInteger)r column:(NSUInteger)c;
+// Accessors
+- (Matrix*)row:(NSUInteger)rowNumber;
+- (Matrix*)column:(NSUInteger)columnNumber;
+- (double)elementAtRow:(NSUInteger)rowNumber column:(NSUInteger)columnNumber;
 
 @end
 

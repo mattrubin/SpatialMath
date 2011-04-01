@@ -16,6 +16,9 @@
 
 
 #pragma mark Initializers
+/**
+ * Initialize a zero matrix with the given number of rows and columns.
+ */
 - (id)initWithRows:(NSUInteger)r columns:(NSUInteger)c
 {
 	if(r==0 || c==0){
@@ -30,6 +33,9 @@
 	return self;
 }
 
+/**
+ * Initialize a matrix from the given array of elements, arranged in the given number of rows and columns.
+ */
 - (id)initWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c
 {
 	if((self = [self initWithRows:r columns:c])){
@@ -40,11 +46,17 @@
 	return self;
 }
 
+/**
+ * Initialize a matrix by copying the given matrix.
+ */
 - (id)initWithMatrix:(Matrix*)m
 {
 	return [self initWithElements:m.elements rows:m.rows columns:m.columns];
 }
 
+/**
+ * Initialize a matrix by copying the give matrix and removing the specified row and column.
+ */
 - (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)row column:(NSUInteger)column
 {
 	NSLog(@"Removing row %i and column %i from %@", row, column, m);
@@ -67,6 +79,9 @@
 	return self;
 }
 
+/**
+ * Initialize an identity matrix of the specified size.
+ */
 - (id)initIdentityMatrixWithSize:(NSUInteger)size
 {
 	if(self = [self initWithRows:size columns:size]){
@@ -101,11 +116,18 @@
 
 
 #pragma mark Boolean Properties
+/**
+ * Returns true if the matrix has an equal number of rows and columns.
+ */
 - (bool)isSquare
 {
 	return rows==columns;
 }
 
+/**
+ * Returns true if all elements outside the main diagonal are zero.
+ * A matrix must be square to be diagonal.
+ */
 - (bool)isDiagonal
 {
 	if(rows!=columns) return FALSE;
@@ -118,6 +140,10 @@
 	return TRUE;
 }
 
+/**
+ * Returns true if the matrix is equal to its transpose (symmetric with respect to the main diagonal).
+ * A matrix must be square to be symmetric.
+ */
 - (bool)isSymmetric
 {
 	if(rows!=columns) return FALSE;
@@ -130,6 +156,10 @@
 	return TRUE;
 }
 
+/**
+ * Returns true if the columns and rows are orthogonal unit vectors (i.e., orthonormal vectors).
+ * A matrix must be square to be orthogonal.
+ */
 - (bool)isOrthogonal
 {
 	Vector *v[columns];
@@ -145,11 +175,17 @@
 	return TRUE;
 }
 
+/**
+ * Returns true if the determinant of the matrix is not equal to zero.
+ */
 - (bool)isInvertible
 {
 	return [self determinant]!=0;
 }
 
+/**
+ * Returns true if every element of the matrix is zero.
+ */
 - (bool)isZero
 {
 	for(NSUInteger r=0; r<rows; r++){
@@ -162,11 +198,17 @@
 
 
 #pragma mark Comparison Functions
+/**
+ * Returns true if equal to the given matrix.
+ */
 - (bool)isEqualToMatrix:(Matrix *)matrix
 {
 	return (self.rows==matrix.rows && self.columns==matrix.columns && memcmp(self.elements, matrix.elements, sizeof(double)*self.rows*self.columns)==0);
 }
 
+/**
+ * Returns true if equal to the given array of elements.
+ */
 - (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c
 {
 	return (self.rows==r && self.columns==c && memcmp(self.elements, e, sizeof(double)*self.rows*self.columns)==0);
@@ -174,6 +216,9 @@
 
 
 #pragma mark Accessors
+/**
+ * Return the given row as a 1-by-columns matrix.
+ */
 - (Matrix*)row:(NSUInteger)r
 {
 	Matrix* m = [Matrix matrixWithRows:1 columns:self.columns];
@@ -183,6 +228,9 @@
 	return m;
 }
 
+/**
+ * Return the given column as a rows-by-1 matrix.
+ */
 - (Matrix*)column:(NSUInteger)c;
 {
 	Matrix* m = [Matrix matrixWithRows:self.rows columns:1];
@@ -192,6 +240,9 @@
 	return m;
 }
 
+/**
+ * Return the element at the specified row and column.
+ */
 - (double)elementAtRow:(NSUInteger)r column:(NSUInteger)c
 {
 	return self.elements[c*self.rows+r];
