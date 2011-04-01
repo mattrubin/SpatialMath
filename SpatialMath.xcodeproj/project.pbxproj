@@ -12,6 +12,8 @@
 		C947E894131B558A00CEB999 /* Test_MatrixOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C947E893131B558A00CEB999 /* Test_MatrixOperations.m */; };
 		C94C366E1310985900EF492B /* Test_Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C366D1310985900EF492B /* Test_Matrix.m */; };
 		C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
+		C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = C963B3E61345A1E7008AC4F7 /* Transform.h */; };
+		C963B3E91345A1E7008AC4F7 /* Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = C963B3E71345A1E7008AC4F7 /* Transform.m */; };
 		C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */ = {isa = PBXBuildFile; fileRef = C989756512EBBC0B00B831A3 /* SpatialMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5BEE12EBA394002E7101 /* Matrix.m */; };
 		C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC5BEF12EBA394002E7101 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +48,8 @@
 		C94C36681310980400EF492B /* SpatialMathTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpatialMathTestBundle-Info.plist"; sourceTree = "<group>"; };
 		C94C366C1310985900EF492B /* Test_Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Matrix.h; sourceTree = "<group>"; };
 		C94C366D1310985900EF492B /* Test_Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_Matrix.m; sourceTree = "<group>"; };
+		C963B3E61345A1E7008AC4F7 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
+		C963B3E71345A1E7008AC4F7 /* Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transform.m; sourceTree = "<group>"; };
 		C989756512EBBC0B00B831A3 /* SpatialMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath.h; sourceTree = "<group>"; };
 		C9CC5BEE12EBA394002E7101 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		C9CC5BEF12EBA394002E7101 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
@@ -121,9 +125,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C9CC5BEF12EBA394002E7101 /* Matrix.h */,
-				C9CC5BEE12EBA394002E7101 /* Matrix.m */,
-				C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */,
+				C963B39513459B72008AC4F7 /* Matrices */,
 				C9DCD76B12F1F6B300236C37 /* Vector.h */,
 				C9DCD76C12F1F6B300236C37 /* Vector.m */,
 				C9DCD7FC12F2118C00236C37 /* VectorOperations.m */,
@@ -169,6 +171,18 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		C963B39513459B72008AC4F7 /* Matrices */ = {
+			isa = PBXGroup;
+			children = (
+				C9CC5BEF12EBA394002E7101 /* Matrix.h */,
+				C9CC5BEE12EBA394002E7101 /* Matrix.m */,
+				C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */,
+				C963B3E61345A1E7008AC4F7 /* Transform.h */,
+				C963B3E71345A1E7008AC4F7 /* Transform.m */,
+			);
+			name = Matrices;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -179,6 +193,7 @@
 				C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */,
 				C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */,
 				C9DCD76D12F1F6B300236C37 /* Vector.h in Headers */,
+				C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +308,7 @@
 				C9CC5C1712EBAB43002E7101 /* MatrixOperations.m in Sources */,
 				C9DCD76E12F1F6B300236C37 /* Vector.m in Sources */,
 				C9DCD7FE12F2118C00236C37 /* VectorOperations.m in Sources */,
+				C963B3E91345A1E7008AC4F7 /* Transform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
