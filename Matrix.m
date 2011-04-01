@@ -180,6 +180,7 @@
  */
 - (bool)isInvertible
 {
+	// TODO: An orthogonal matrix Q is necessarily square and invertible... (easier?)
 	return [self determinant]!=0;
 }
 
