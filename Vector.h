@@ -16,16 +16,6 @@
 @property (readonly) NSUInteger dimensions;
 @property (readonly) double length;
 
-- (id)initWithDimensions:(NSUInteger)d;
-- (id)initWithDimensions:(NSUInteger)d elements:(double*)e;
-- (id)initWithVector:(Vector*)v;
-- (id)initWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d;
-
-+ (id)vectorWithDimensions:(NSUInteger)d;
-+ (id)vectorWithDimensions:(NSUInteger)d elements:(double*)e;
-+ (id)vectorWithVector:(Vector*)v;
-+ (id)vectorWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d;
-
 - (bool)isUnitVector;
 - (bool)isOrthogonalToVector:(Vector*)v;
 - (bool)isEqualToVector:(Vector *)vector;

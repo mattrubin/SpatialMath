@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		C91D1D6413485FC900630DBE /* GenericVector.h in Headers */ = {isa = PBXBuildFile; fileRef = C91D1D6213485FC900630DBE /* GenericVector.h */; };
+		C91D1D6513485FC900630DBE /* GenericVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C91D1D6313485FC900630DBE /* GenericVector.m */; };
 		C947E894131B558A00CEB999 /* Test_MatrixOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C947E893131B558A00CEB999 /* Test_MatrixOperations.m */; };
 		C94C366E1310985900EF492B /* Test_Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C94C366D1310985900EF492B /* Test_Matrix.m */; };
 		C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
@@ -43,6 +45,8 @@
 		32DBCF5E0370ADEE00C91783 /* SpatialMath_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* SpatialMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpatialMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91D1D6213485FC900630DBE /* GenericVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericVector.h; sourceTree = "<group>"; };
+		C91D1D6313485FC900630DBE /* GenericVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericVector.m; sourceTree = "<group>"; };
 		C947E892131B558A00CEB999 /* Test_MatrixOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_MatrixOperations.h; sourceTree = "<group>"; };
 		C947E893131B558A00CEB999 /* Test_MatrixOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_MatrixOperations.m; sourceTree = "<group>"; };
 		C947E89B131B580C00CEB999 /* TestBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBundle.h; sourceTree = "<group>"; };
@@ -130,9 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				C963B39513459B72008AC4F7 /* Matrices */,
-				C9DCD76B12F1F6B300236C37 /* Vector.h */,
-				C9DCD76C12F1F6B300236C37 /* Vector.m */,
-				C9DCD7FC12F2118C00236C37 /* VectorOperations.m */,
+				C91D1D5D13485F4300630DBE /* Vectors */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -161,6 +163,18 @@
 				32DBCF5E0370ADEE00C91783 /* SpatialMath_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		C91D1D5D13485F4300630DBE /* Vectors */ = {
+			isa = PBXGroup;
+			children = (
+				C9DCD76B12F1F6B300236C37 /* Vector.h */,
+				C9DCD76C12F1F6B300236C37 /* Vector.m */,
+				C9DCD7FC12F2118C00236C37 /* VectorOperations.m */,
+				C91D1D6213485FC900630DBE /* GenericVector.h */,
+				C91D1D6313485FC900630DBE /* GenericVector.m */,
+			);
+			name = Vectors;
 			sourceTree = "<group>";
 		};
 		C94C3445131073DF00EF492B /* Tests */ = {
@@ -201,6 +215,7 @@
 				C9DCD76D12F1F6B300236C37 /* Vector.h in Headers */,
 				C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */,
 				C9FF84BA134802330053856D /* GenericMatrix.h in Headers */,
+				C91D1D6413485FC900630DBE /* GenericVector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +332,7 @@
 				C9DCD7FE12F2118C00236C37 /* VectorOperations.m in Sources */,
 				C963B3E91345A1E7008AC4F7 /* Transform.m in Sources */,
 				C9FF84BB134802330053856D /* GenericMatrix.m in Sources */,
+				C91D1D6513485FC900630DBE /* GenericVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

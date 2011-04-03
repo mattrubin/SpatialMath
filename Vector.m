@@ -7,7 +7,7 @@
 //
 
 #import "Vector.h"
-
+#import "GenericVector.h"
 
 @implementation Vector
 
@@ -26,40 +26,12 @@
 
 
 #pragma mark Initializers
-- (id)initWithDimensions:(NSUInteger)d
+- (id)init
 {
-	return [self initWithRows:d columns:1];
-}
-- (id)initWithDimensions:(NSUInteger)d elements:(double*)e
-{
-	return [self initWithElements:e rows:d columns:1];
-}
-- (id)initWithVector:(Vector*)v
-{
-	return [self initWithMatrix:v];
-}
-- (id)initWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d
-{
-	return [self initWithMatrix:v byRemovingRow:d column:-1];
-}
-
-
-#pragma mark Generators
-+ (id)vectorWithDimensions:(NSUInteger)d
-{
-	return [[[Vector alloc] initWithDimensions:d] autorelease];
-}
-+ (id)vectorWithDimensions:(NSUInteger)d elements:(double*)e
-{
-	return [[[Vector alloc] initWithDimensions:d elements:e] autorelease];
-}
-+ (id)vectorWithVector:(Vector*)v
-{
-	return [[[Vector alloc] initWithVector:v] autorelease];
-}
-+ (id)vectorWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d
-{
-	return [[[Vector alloc] initWithVector:v byRemovingDimension:d] autorelease];
+	if ((self = [super init])) {
+		columns = 1;
+	}
+	return self;
 }
 
 
@@ -94,7 +66,7 @@
 - (Vector*)versor
 {
 	double l = self.length;
-	Vector *vector = [Vector vectorWithVector:self];
+	Vector *vector = [GenericVector vectorWithVector:self];
 	for(NSUInteger i=0; i<vector.dimensions; i++)
 		vector.elements[i] /= l;
 	return vector;

@@ -8,7 +8,7 @@
 
 #import "Matrix.h"
 #import "GenericMatrix.h"
-#import "Vector.h"
+#import "GenericVector.h"
 
 @implementation Matrix
 
@@ -79,7 +79,7 @@
 {
 	Vector *v[columns];
 	for(NSUInteger c=0; c<columns; c++){
-		v[c] = [Vector vectorWithDimensions:rows elements:[self column:c].elements];
+		v[c] = [GenericVector vectorWithDimensions:rows elements:[self column:c].elements];
 		if(![v[c] isUnitVector]) return FALSE;
 	}
 	for(NSUInteger i=0; i<columns-1; i++){
