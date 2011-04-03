@@ -7,6 +7,7 @@
 //
 
 #import "Matrix.h"
+#import "GenericMatrix.h"
 
 @implementation Matrix (MatrixOperations)
 
@@ -18,14 +19,14 @@
 		for(NSUInteger c=0; c<columns; c++)
 			buffer[r*columns+c] = elements[c*rows+r];
 	}
-	Matrix* result = [Matrix matrixWithElements:buffer rows:columns columns:rows];
+	Matrix* result = [GenericMatrix matrixWithElements:buffer rows:columns columns:rows];
 	return result;
 }
 
 - (Matrix*)multiplyByMatrix:(Matrix*)matrix{
 	if(columns != matrix.rows) return nil;
 	
-	Matrix* result = [Matrix matrixWithRows:rows columns:matrix.columns];
+	Matrix* result = [GenericMatrix matrixWithRows:rows columns:matrix.columns];
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<matrix.columns; c++){
 			double sum = 0.0;
@@ -38,7 +39,7 @@
 }
 
 - (Matrix*)multiplyByScalar:(double)scalar{
-	Matrix* result = [Matrix matrixWithRows:rows columns:columns];
+	Matrix* result = [GenericMatrix matrixWithRows:rows columns:columns];
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<columns; c++){
 			result.elements[c*rows+r] = elements[c*rows+r]*scalar;
@@ -48,7 +49,7 @@
 }
 
 - (Matrix*)addScalar:(double)scalar{
-	Matrix* result = [Matrix matrixWithRows:rows columns:columns];
+	Matrix* result = [GenericMatrix matrixWithRows:rows columns:columns];
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<columns; c++){
 			result.elements[c*rows+r] = elements[c*rows+r]+scalar;
@@ -61,7 +62,7 @@
 - (Matrix*)addMatrix:(Matrix*)matrix{
 	if(columns != matrix.columns || rows != matrix.rows) return nil;
 	
-	Matrix* result = [Matrix matrixWithRows:rows columns:matrix.columns];
+	Matrix* result = [GenericMatrix matrixWithRows:rows columns:matrix.columns];
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<columns; c++){
 			result.elements[c*rows+r] = elements[c*rows+r] + matrix.elements[c*rows+r];
@@ -72,7 +73,7 @@
 
 - (Matrix*)directSumWithMatrix:(Matrix*)B{
 	Matrix *A = self;
-	Matrix* result = [Matrix matrixWithRows:A.rows+B.rows columns:A.columns+B.columns];
+	Matrix* result = [GenericMatrix matrixWithRows:A.rows+B.rows columns:A.columns+B.columns];
 	for(NSUInteger r=0; r<A.rows; r++){
 		for(NSUInteger c=0; c<A.columns; c++){
 			result.elements[c*result.rows+r] = A.elements[c*A.rows+r];
@@ -93,7 +94,7 @@
 - (double)cofactorOfRow:(NSUInteger)r column:(NSUInteger)c
 {
 	NSLog(@"calculationg cofactor of (%i,%i) in a %ix%i matrix:", r,c, rows, columns);
-	Matrix *cofactorMatrix = [Matrix matrixWithMatrix:self byRemovingRow:r column:c];
+	Matrix *cofactorMatrix = [GenericMatrix matrixWithMatrix:self byRemovingRow:r column:c];
 	NSLog(@"%@", cofactorMatrix);
 	double cofactor = [cofactorMatrix determinant];
 	if((r+c)%2!=0) cofactor *= -1;
