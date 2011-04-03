@@ -78,7 +78,7 @@
 {
 	NSUInteger rows = arc4random()%100 + 1;
 	NSUInteger columns = arc4random()%100 + 1;
-	Matrix *m = [[Matrix alloc] initWithRows:rows columns:columns];
+	Matrix *m = [[GenericMatrix alloc] initWithRows:rows columns:columns];
 	
     STAssertEquals(m.rows, rows, @"Wrong number of rows");
     STAssertEquals(m.columns, columns, @"Wrong number of columns");
@@ -93,7 +93,7 @@
 	NSUInteger columns = arc4random()%20 + 1;
 	double buffer[rows*columns];
 	LOOP(rows*columns, buffer[i]=(arc4random()%1000 + 1)/(arc4random()%100 + 1));
-	Matrix *m = [[Matrix alloc] initWithElements:buffer rows:rows columns:columns];
+	Matrix *m = [[GenericMatrix alloc] initWithElements:buffer rows:rows columns:columns];
 	
     STAssertEquals(m.rows, rows, @"Wrong number of rows");
     STAssertEquals(m.columns, columns, @"Wrong number of columns");
@@ -108,8 +108,8 @@
 	NSUInteger columns = arc4random()%20 + 1;
 	double buffer[rows*columns];
 	LOOP(rows*columns, buffer[i]=(arc4random()%1000 + 1)/(arc4random()%100 + 1));
-	Matrix *m = [[Matrix alloc] initWithElements:buffer rows:rows columns:columns];
-	Matrix *n = [[Matrix alloc] initWithMatrix:m];
+	Matrix *m = [[GenericMatrix alloc] initWithElements:buffer rows:rows columns:columns];
+	Matrix *n = [[GenericMatrix alloc] initWithMatrix:m];
 	
     STAssertEquals(n.rows, rows, @"Wrong number of rows");
     STAssertEquals(n.columns, columns, @"Wrong number of columns");

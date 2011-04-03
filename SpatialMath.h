@@ -9,5 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 #import "Matrix.h"
+#import "GenericMatrix.h"
 #import "Transform.h"
+
 #import "Vector.h"
+#import "GenericVector.h"

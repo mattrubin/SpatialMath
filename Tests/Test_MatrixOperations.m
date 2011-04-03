@@ -21,7 +21,7 @@
 	NSUInteger columns = 2;
 	double buffer[rows*columns];
 	LOOP(rows*columns, buffer[i]=(arc4random()%1000 + 1)/(arc4random()%100 + 1));
-	Matrix *m = [[Matrix alloc] initWithElements:buffer rows:rows columns:columns];
+	Matrix *m = [[GenericMatrix alloc] initWithElements:buffer rows:rows columns:columns];
 	
 	double det = [m determinant];
 	double det2 = [[m transpose] determinant];
@@ -37,7 +37,7 @@
 	NSUInteger columns = 3;
 	double buffer[rows*columns];
 	LOOP(rows*columns, buffer[i]=(arc4random()%1000 + 1)/(arc4random()%100 + 1));
-	Matrix *m = [[Matrix alloc] initWithElements:buffer rows:rows columns:columns];
+	Matrix *m = [[GenericMatrix alloc] initWithElements:buffer rows:rows columns:columns];
 	
 	double det = [m determinant];
 	double det2 = [[m transpose] determinant];
