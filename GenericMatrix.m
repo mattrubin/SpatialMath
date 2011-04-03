@@ -51,12 +51,13 @@
 }
 
 /**
- * Initialize a matrix by copying the give matrix and removing the specified row and column.
+ * Initialize a matrix by copying the given matrix and removing the specified row and column.
+ * The given matrix must have at least two rows and two columns
  */
 - (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)row column:(NSUInteger)column
 {
-	NSLog(@"Removing row %i and column %i from %@", row, column, m);
-	if(m.rows<2 || m.columns<2 || row<0 || row>=m.rows || column<0 || column>=m.columns){
+	NSLog(@"Removing row %lu and column %lu from %@", row, column, m);
+	if(m.rows<2 || m.columns<2 || row>=m.rows || column>=m.columns){
 		[self release];
 		return nil;
 	}
@@ -80,7 +81,7 @@
  */
 - (id)initIdentityMatrixWithSize:(NSUInteger)size
 {
-	if(self = [self initWithRows:size columns:size]){
+	if((self = [self initWithRows:size columns:size])){
 		for(NSUInteger i=0; i<size; i++){
 			elements[i*size + i] = 1;
 		}
