@@ -197,6 +197,14 @@
 	return TRUE;
 }
 
+/**
+ * Returns true if one or both of the matrix dimensions is zero.
+ */
+- (bool)isEmpty
+{
+	return (rows==0 || columns==0);
+}
+
 
 #pragma mark Comparison Functions
 /**

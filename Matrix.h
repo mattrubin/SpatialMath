@@ -41,6 +41,7 @@
 - (bool)isOrthogonal;
 - (bool)isInvertible;
 - (bool)isZero;
+- (bool)isEmpty;
 
 // Comparison Functions
 - (bool)isEqualToMatrix:(Matrix *)matrix;
