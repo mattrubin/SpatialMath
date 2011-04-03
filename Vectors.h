@@ -9,3 +9,4 @@
 #import "Vector.h"
 #import "GenericVector.h"
 #import "Vector2.h"
+#import "Vector3.h"

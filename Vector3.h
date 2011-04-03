@@ -1,5 +1,5 @@
 //
-//  Vector2.h
+//  Vector3.h
 //  SpatialMath
 //
 //  Created by Matt Rubin on 4/3/11.
@@ -10,9 +10,10 @@
 #import "Vector.h"
 
 
-@interface Vector2 : Vector {}
+@interface Vector3 : Vector {}
 
 @property (assign) double x;
 @property (assign) double y;
+@property (assign) double z;
 
 @end
