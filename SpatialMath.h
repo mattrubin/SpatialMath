@@ -6,11 +6,5 @@
 //  Copyright 2011 Stanford University. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
-#import "Matrix.h"
-#import "GenericMatrix.h"
-#import "Transform.h"
-
-#import "Vector.h"
-#import "GenericVector.h"
+#import "Matrices.h"
+#import "Vectors.h"

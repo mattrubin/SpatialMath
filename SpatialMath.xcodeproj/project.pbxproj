@@ -20,6 +20,8 @@
 		C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5BEE12EBA394002E7101 /* Matrix.m */; };
 		C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC5BEF12EBA394002E7101 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CC5C1712EBAB43002E7101 /* MatrixOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */; };
+		C9CDB98C1349124B00261A9E /* Matrices.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CDB98B1349124B00261A9E /* Matrices.h */; };
+		C9CDB98E1349128B00261A9E /* Vectors.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CDB98D1349128B00261A9E /* Vectors.h */; };
 		C9DCD76D12F1F6B300236C37 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = C9DCD76B12F1F6B300236C37 /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9DCD76E12F1F6B300236C37 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DCD76C12F1F6B300236C37 /* Vector.m */; };
 		C9DCD7FE12F2118C00236C37 /* VectorOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DCD7FC12F2118C00236C37 /* VectorOperations.m */; };
@@ -60,6 +62,8 @@
 		C9CC5BEE12EBA394002E7101 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		C9CC5BEF12EBA394002E7101 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixOperations.m; sourceTree = "<group>"; };
+		C9CDB98B1349124B00261A9E /* Matrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrices.h; sourceTree = "<group>"; };
+		C9CDB98D1349128B00261A9E /* Vectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vectors.h; sourceTree = "<group>"; };
 		C9DCD76B12F1F6B300236C37 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		C9DCD76C12F1F6B300236C37 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
 		C9DCD7FC12F2118C00236C37 /* VectorOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VectorOperations.m; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		C91D1D5D13485F4300630DBE /* Vectors */ = {
 			isa = PBXGroup;
 			children = (
+				C9CDB98D1349128B00261A9E /* Vectors.h */,
 				C9DCD76B12F1F6B300236C37 /* Vector.h */,
 				C9DCD76C12F1F6B300236C37 /* Vector.m */,
 				C9DCD7FC12F2118C00236C37 /* VectorOperations.m */,
@@ -192,6 +197,7 @@
 		C963B39513459B72008AC4F7 /* Matrices */ = {
 			isa = PBXGroup;
 			children = (
+				C9CDB98B1349124B00261A9E /* Matrices.h */,
 				C9CC5BEF12EBA394002E7101 /* Matrix.h */,
 				C9CC5BEE12EBA394002E7101 /* Matrix.m */,
 				C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */,
@@ -216,6 +222,8 @@
 				C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */,
 				C9FF84BA134802330053856D /* GenericMatrix.h in Headers */,
 				C91D1D6413485FC900630DBE /* GenericVector.h in Headers */,
+				C9CDB98C1349124B00261A9E /* Matrices.h in Headers */,
+				C9CDB98E1349128B00261A9E /* Vectors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
