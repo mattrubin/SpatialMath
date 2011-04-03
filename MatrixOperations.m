@@ -93,7 +93,7 @@
 
 - (double)cofactorOfRow:(NSUInteger)r column:(NSUInteger)c
 {
-	NSLog(@"calculationg cofactor of (%i,%i) in a %ix%i matrix:", r,c, rows, columns);
+	NSLog(@"calculationg cofactor of (%lu,%lu) in a %lux%lu matrix:", r,c, rows, columns);
 	Matrix *cofactorMatrix = [GenericMatrix matrixWithMatrix:self byRemovingRow:r column:c];
 	NSLog(@"%@", cofactorMatrix);
 	double cofactor = [cofactorMatrix determinant];
