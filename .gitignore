@@ -2,7 +2,11 @@
 References/
 Sandbox/
 
-# Xcode noise
+# Xcode 4
+*.xcworkspace/
+xcuserdata/
+
+# Xcode 3
 build/
 *.pbxuser
 *.mode1v3
@@ -12,9 +16,10 @@ build/
 *.pyc 
 *~.nib/
 
-# OSX noise
+# Mac OS X
 .DS_Store
 profile
+.LSOverride
 
 # Textmate - if you build your xcode projects with it
 *.tm_build_errors
