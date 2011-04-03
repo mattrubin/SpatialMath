@@ -193,4 +193,10 @@
 	return str;
 }
 
+- (void)dealloc
+{
+	if(elements) free(elements);
+    [super dealloc];
+}
+
 @end
