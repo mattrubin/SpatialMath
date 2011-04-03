@@ -1,5 +1,5 @@
 //
-//  Vectors.h
+//  Vector2.h
 //  SpatialMath
 //
 //  Created by Matt Rubin on 4/3/11.
@@ -7,5 +7,11 @@
 //
 
 #import "Vector.h"
-#import "GenericVector.h"
-#import "Vector2.h"
+
+
+@interface Vector2 : Vector {}
+
+@property (assign) double x;
+@property (assign) double y;
+
+@end
