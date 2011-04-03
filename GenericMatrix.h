@@ -10,9 +10,7 @@
 #import "Matrix.h"
 
 
-@interface GenericMatrix : Matrix {
-
-}
+@interface GenericMatrix : Matrix {}
 
 // Initializers
 - (id)initWithRows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;

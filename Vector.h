@@ -7,12 +7,11 @@
 //
 
 #pragma once
-#import <Cocoa/Cocoa.h>
 #import "Matrix.h"
 
-@interface Vector : Matrix {
 
-}
+@interface Vector : Matrix {}
+
 @property (readonly) NSUInteger dimensions;
 @property (readonly) double length;
 
@@ -26,6 +25,7 @@
 - (Vector*)versor;
 
 @end
+
 
 @interface Vector (VectorOperations)
 

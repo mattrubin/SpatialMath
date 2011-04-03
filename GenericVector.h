@@ -6,6 +6,7 @@
 //  Copyright 2011 Matt Rubin. All rights reserved.
 //
 
+#pragma once
 #import "Vector.h"
 
 
