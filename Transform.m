@@ -11,32 +11,77 @@
 
 @implementation Transform
 
-#pragma mark Override Matrix Initializers
-- (id)initWithRows:(NSUInteger)r columns:(NSUInteger)c {
-	[NSException raise:@"Invalid Generator" format:@"A Transform object must have 4 rows and 4 columns."];
-	return nil;
+
+#pragma mark Initializers
+/**
+ * Initialize an identity transform.
+ */
+- (id)init
+{
+	if((self = [self initZeroTransform])){
+		for(NSUInteger i=0; i<rows; i++){
+			elements[i*rows + i] = 1;
+		}
+	}
+	return self;
 }
 
-- (id)initWithElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c {
-	[NSException raise:@"Invalid Generator" format:@"A Transform object must have 4 rows and 4 columns."];
-	return nil;
+/**
+ * Initialize a zero-matrix transform.
+ */
+- (id)initZeroTransform
+{
+	if((self = [super init])){
+		rows = 4;
+		columns = 4;
+		elements = (double*)calloc(rows*columns, sizeof(double));
+	}
+	return self;
 }
 
-- (id)initWithMatrix:(Matrix*)m {
-	[NSException raise:@"Invalid Generator" format:@"A Transform object cannot copy a generic matrix."];
-	return nil;
+/**
+ * Initialize a transform from the given array of elements.
+ */
+- (id)initWithElements:(double*)elementArray
+{
+	if((self = [self initZeroTransform])){
+		for(int i = 0; i < rows*columns; i++){
+			elements[i] = elementArray[i];
+		}
+	}
+	return self;
 }
 
-- (id)initWithMatrix:(Matrix*)m byRemovingRow:(NSUInteger)row column:(NSUInteger)column {
-	[NSException raise:@"Invalid Generator" format:@"A Transform object must have 4 rows and 4 columns."];
-	return nil;
+/**
+ * Initialize a transform by copying the given transform.
+ */
+- (id)initWithTransform:(Transform*)transform
+{
+	if((self = [self initZeroTransform])){
+		for(int i = 0; i < rows*columns; i++){
+			elements[i] = transform.elements[i];
+		}
+	}
+	return self;
 }
 
-- (id)initIdentityMatrixWithSize:(NSUInteger)size {
-	[NSException raise:@"Invalid Generator" format:@"A Transform object must have 4 rows and 4 columns."];
-	return nil;
+
+#pragma mark Generators
++ (id)zeroTransform
+{
+	return [[[Transform alloc] initZeroTransform] autorelease];
 }
 
++ (id)transformWithElements:(double*)elementArray
+{
+	return [[[Transform alloc] initWithElements:elementArray] autorelease];
+}
 
++ (id)transformWithTransform:(Transform*)transform
+{
+	// The cast to a Transform* is simply to avoid a silly compilation warning
+	// where the compiler expects initWithTransform: to take an NSAffineTransform*
+	return [[(Transform*)[Transform alloc] initWithTransform:transform] autorelease];
+}
 
 @end

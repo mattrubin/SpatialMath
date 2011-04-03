@@ -181,10 +181,10 @@
 				C9CC5BEF12EBA394002E7101 /* Matrix.h */,
 				C9CC5BEE12EBA394002E7101 /* Matrix.m */,
 				C9CC5C1612EBAB43002E7101 /* MatrixOperations.m */,
-				C963B3E61345A1E7008AC4F7 /* Transform.h */,
-				C963B3E71345A1E7008AC4F7 /* Transform.m */,
 				C9FF84B8134802330053856D /* GenericMatrix.h */,
 				C9FF84B9134802330053856D /* GenericMatrix.m */,
+				C963B3E61345A1E7008AC4F7 /* Transform.h */,
+				C963B3E71345A1E7008AC4F7 /* Transform.m */,
 			);
 			name = Matrices;
 			sourceTree = "<group>";

@@ -10,8 +10,16 @@
 #import "Matrix.h"
 
 
-@interface Transform : Matrix {
+@interface Transform : Matrix {}
 
-}
+// Initializers
+- (id)initZeroTransform;
+- (id)initWithElements:(double*)elementArray;
+- (id)initWithTransform:(Transform*)transform;
+
+// Generators
++ (id)zeroTransform;
++ (id)transformWithElements:(double*)elementArray;
++ (id)transformWithTransform:(Transform*)transform;
 
 @end
