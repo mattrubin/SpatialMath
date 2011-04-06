@@ -16,6 +16,7 @@
 		C94C36B813109DC800EF492B /* SpatialMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* SpatialMath.framework */; };
 		C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = C963B3E61345A1E7008AC4F7 /* Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C963B3E91345A1E7008AC4F7 /* Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = C963B3E71345A1E7008AC4F7 /* Transform.m */; };
+		C96B65E1134BC0D300967B3B /* Test_GenericVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C96B65E0134BC0D300967B3B /* Test_GenericVector.m */; };
 		C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */ = {isa = PBXBuildFile; fileRef = C989756512EBBC0B00B831A3 /* SpatialMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CC5BF012EBA394002E7101 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5BEE12EBA394002E7101 /* Matrix.m */; };
 		C9CC5BF112EBA394002E7101 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC5BEF12EBA394002E7101 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +63,8 @@
 		C94C366D1310985900EF492B /* Test_Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_Matrix.m; sourceTree = "<group>"; };
 		C963B3E61345A1E7008AC4F7 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
 		C963B3E71345A1E7008AC4F7 /* Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transform.m; sourceTree = "<group>"; };
+		C96B65DF134BC0D300967B3B /* Test_GenericVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_GenericVector.h; sourceTree = "<group>"; };
+		C96B65E0134BC0D300967B3B /* Test_GenericVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_GenericVector.m; sourceTree = "<group>"; };
 		C989756512EBBC0B00B831A3 /* SpatialMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath.h; sourceTree = "<group>"; };
 		C9CC5BEE12EBA394002E7101 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		C9CC5BEF12EBA394002E7101 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				C94C366D1310985900EF492B /* Test_Matrix.m */,
 				C947E892131B558A00CEB999 /* Test_MatrixOperations.h */,
 				C947E893131B558A00CEB999 /* Test_MatrixOperations.m */,
+				C96B65DF134BC0D300967B3B /* Test_GenericVector.h */,
+				C96B65E0134BC0D300967B3B /* Test_GenericVector.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 			files = (
 				C94C366E1310985900EF492B /* Test_Matrix.m in Sources */,
 				C947E894131B558A00CEB999 /* Test_MatrixOperations.m in Sources */,
+				C96B65E1134BC0D300967B3B /* Test_GenericVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

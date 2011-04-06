@@ -40,9 +40,9 @@
 }
 - (id)initWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d
 {
-	if((self = [self initWithDimensions:v.dimensions])){
+	if((self = [self initWithDimensions:v.dimensions-1])){
 		NSUInteger index = 0;
-		for(int i = 0; i < rows; i++){
+		for(int i = 0; i < v.dimensions; i++){
 			if(i!=d)
 				elements[index++] = v.elements[i];
 		}
