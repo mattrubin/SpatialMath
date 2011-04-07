@@ -9,20 +9,7 @@
 #import "TestBundle.h"
 
 
-@interface Test_Matrix : SenTestCase {
-
-}
-- (void) initWithRows_columns;
-- (void) initWithElements_rows_columns;
-- (void) initWithMatrix;
-- (void) initWithMatrix_byRemovingRow_column;
-- (void) initIdentityMatrixWithSize;
-
-- (void) matrixWithRows_columns;
-- (void) matrixWithElements_rows_columns;
-- (void) matrixWithMatrix;
-- (void) matrixWithMatrix_byRemovingRow_column;
-- (void) identityMatrixWithSize;
+@interface Test_Matrix : SenTestCase {}
 
 - (void) isSquare;
 - (void) isDiagonal;
