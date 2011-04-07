@@ -16,4 +16,10 @@
 - (void)initWithVector;
 - (void)initWithVector_byRemovingDimension;
 
+// Generators
+- (void)vectorWithDimensions;
+- (void)vectorWithDimensions_elements;
+- (void)vectorWithVector;
+- (void)vectorWithVector_byRemovingDimension;
+
 @end

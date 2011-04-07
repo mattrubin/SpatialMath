@@ -54,19 +54,19 @@
 #pragma mark Generators
 + (id)vectorWithDimensions:(NSUInteger)d
 {
-	return [[[Vector alloc] initWithDimensions:d] autorelease];
+	return [[[GenericVector alloc] initWithDimensions:d] autorelease];
 }
 + (id)vectorWithDimensions:(NSUInteger)d elements:(double*)e
 {
-	return [[[Vector alloc] initWithDimensions:d elements:e] autorelease];
+	return [[[GenericVector alloc] initWithDimensions:d elements:e] autorelease];
 }
 + (id)vectorWithVector:(Vector*)v
 {
-	return [[[Vector alloc] initWithVector:v] autorelease];
+	return [[[GenericVector alloc] initWithVector:v] autorelease];
 }
 + (id)vectorWithVector:(Vector*)v byRemovingDimension:(NSUInteger)d
 {
-	return [[[Vector alloc] initWithVector:v byRemovingDimension:d] autorelease];
+	return [[[GenericVector alloc] initWithVector:v byRemovingDimension:d] autorelease];
 }
 
 @end
