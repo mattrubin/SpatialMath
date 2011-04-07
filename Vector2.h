@@ -15,4 +15,13 @@
 @property (assign) double x;
 @property (assign) double y;
 
+// Initializers
+- (id)initWithElements:(double*)e;
+- (id)initWithVector:(Vector2*)v;
+
+// Generators
++ (id)vector;
++ (id)vectorWithElements:(double*)e;
++ (id)vectorWithVector:(Vector2*)v;
+
 @end
