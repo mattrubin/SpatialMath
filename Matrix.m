@@ -178,9 +178,9 @@
 	NSMutableString* str = [NSMutableString new];
 	[str appendString:@"Matrix:\n"];
 	for(NSUInteger r = 0; r < rows; r++){
-		[str appendString:@"["];
+		[str appendString:@"   ["];
 		for(NSUInteger c = 0; c < columns; c++){
-			[str appendFormat:@"%g", elements[c*rows+r]];
+			[str appendFormat:@"% 4.4g", elements[c*rows+r]];
 			if(c+1 != columns)
 				[str appendString:@","];
 		}
