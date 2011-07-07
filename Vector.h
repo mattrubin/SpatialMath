@@ -22,13 +22,17 @@
 
 - (double)element:(NSUInteger)d;
 
-- (Vector*)versor;
 
 @end
 
 
 @interface Vector (VectorOperations)
 
+- (Vector*)versor;
+- (Vector*)opposite;
+
+
+- (Vector*)addVector:(Vector*)vector;
 - (double)dotProduct:(Vector*)vector;
 
 @end

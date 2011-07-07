@@ -63,14 +63,5 @@
 	return [self elementAtRow:d column:1];
 }
 
-- (Vector*)versor
-{
-	double l = self.length;
-	Vector *vector = [GenericVector vectorWithVector:self];
-	for(NSUInteger i=0; i<vector.dimensions; i++)
-		vector.elements[i] /= l;
-	return vector;
-}
-
 
 @end
