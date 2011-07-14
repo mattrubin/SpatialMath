@@ -17,12 +17,12 @@
 
 @property (readonly) double* elements;
 @property (readonly) NSUInteger dimensions;
-@property (readonly) double length;
+@property (readonly) double length; // magnitude? norm?
 
-- (bool)isUnitVector;
-- (bool)isOrthogonalToVector:(Vector*)v;
-- (bool)isEqualToVector:(Vector *)vector;
-- (bool)isEqualToElements:(double*)e dimensions:(NSUInteger)d;
+- (BOOL)isUnitVector;
+- (BOOL)isOrthogonalToVector:(Vector*)v;
+- (BOOL)isEqualToVector:(Vector *)vector;
+- (BOOL)isEqualToElements:(double*)e dimensions:(NSUInteger)d;
 
 - (double)element:(NSUInteger)d;
 
@@ -35,8 +35,10 @@
 - (Vector*)versor;
 - (Vector*)opposite;
 
-
 - (Vector*)addVector:(Vector*)vector;
+- (Vector*)subtractVector:(Vector*)vector;
+- (Vector*)multiplyByScalar:(double)scalar;
+
 - (double)dotProduct:(Vector*)vector;
 
 @end

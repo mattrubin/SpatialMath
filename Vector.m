@@ -34,22 +34,29 @@
 
 
 #pragma mark Boolean Properties
-- (bool)isUnitVector
+- (BOOL)isUnitVector
 {
 	return self.length==1;
 }
 
 
 #pragma mark Comparison Functions
-- (bool)isOrthogonalToVector:(Vector*)v
+- (BOOL)isOrthogonalToVector:(Vector*)v
 {
 	return [self dotProduct:v]==0;
 }
-- (bool)isEqualToVector:(Vector *)vector
+- (BOOL)isEqual:(id)other {
+    if (other == self)
+        return YES;
+    if (!other || ![other isKindOfClass:[self class]])
+        return NO;
+    return [self isEqualToVector:other];
+}
+- (BOOL)isEqualToVector:(Vector *)vector
 {
 	return (self.dimensions==vector.dimensions && memcmp(self.elements, vector.elements, sizeof(double)*self.dimensions)==0);
 }
-- (bool)isEqualToElements:(double*)e dimensions:(NSUInteger)d
+- (BOOL)isEqualToElements:(double*)e dimensions:(NSUInteger)d
 {
 	return (self.dimensions==d && memcmp(self.elements, e, sizeof(double)*self.dimensions)==0);
 }

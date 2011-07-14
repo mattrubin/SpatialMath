@@ -34,7 +34,7 @@
 /**
  * Returns true if the matrix has an equal number of rows and columns.
  */
-- (bool)isSquare
+- (BOOL)isSquare
 {
 	return rows==columns;
 }
@@ -43,7 +43,7 @@
  * Returns true if all elements outside the main diagonal are zero.
  * A matrix must be square to be diagonal.
  */
-- (bool)isDiagonal
+- (BOOL)isDiagonal
 {
 	if(rows!=columns) return FALSE;
 	
@@ -59,7 +59,7 @@
  * Returns true if the matrix is equal to its transpose (symmetric with respect to the main diagonal).
  * A matrix must be square to be symmetric.
  */
-- (bool)isSymmetric
+- (BOOL)isSymmetric
 {
 	if(rows!=columns) return FALSE;
 	
@@ -75,7 +75,7 @@
  * Returns true if the columns and rows are orthogonal unit vectors (i.e., orthonormal vectors).
  * A matrix must be square to be orthogonal.
  */
-- (bool)isOrthogonal
+- (BOOL)isOrthogonal
 {
 	Vector *v[columns];
 	for(NSUInteger c=0; c<columns; c++){
@@ -93,7 +93,7 @@
 /**
  * Returns true if the determinant of the matrix is not equal to zero.
  */
-- (bool)isInvertible
+- (BOOL)isInvertible
 {
 	// TODO: An orthogonal matrix Q is necessarily square and invertible... (easier?)
 	return [self determinant]!=0;
@@ -102,7 +102,7 @@
 /**
  * Returns true if every element of the matrix is zero.
  */
-- (bool)isZero
+- (BOOL)isZero
 {
 	for(NSUInteger r=0; r<rows; r++){
 		for(NSUInteger c=0; c<columns; c++){
@@ -115,7 +115,7 @@
 /**
  * Returns true if one or both of the matrix dimensions is zero.
  */
-- (bool)isEmpty
+- (BOOL)isEmpty
 {
 	return (rows==0 || columns==0);
 }
@@ -125,7 +125,7 @@
 /**
  * Returns true if equal to the given matrix.
  */
-- (bool)isEqualToMatrix:(Matrix *)matrix
+- (BOOL)isEqualToMatrix:(Matrix *)matrix
 {
 	return (self.rows==matrix.rows && self.columns==matrix.columns && memcmp(self.elements, matrix.elements, sizeof(double)*self.rows*self.columns)==0);
 }
@@ -133,7 +133,7 @@
 /**
  * Returns true if equal to the given array of elements.
  */
-- (bool)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c
+- (BOOL)isEqualToElements:(double*)e rows:(NSUInteger)r columns:(NSUInteger)c
 {
 	return (self.rows==r && self.columns==c && memcmp(self.elements, e, sizeof(double)*self.rows*self.columns)==0);
 }

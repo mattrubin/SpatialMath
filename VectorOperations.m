@@ -24,6 +24,26 @@
 	return result;
 }
 
+- (Vector*)subtractVector:(Vector*)vector
+{
+	if(self.dimensions != vector.dimensions) return nil;
+	
+	Vector* result = [GenericVector vectorWithDimensions:self.dimensions];
+	for(NSUInteger d=0; d<self.dimensions; d++){
+		result.elements[d] = self.elements[d] - vector.elements[d];
+	}
+	return result;
+}
+
+- (Vector*)multiplyByScalar:(double)scalar
+{
+	Vector* result = [GenericVector vectorWithDimensions:self.dimensions];
+	for(NSUInteger d=0; d<self.dimensions; d++){
+		result.elements[d] = self.elements[d]*scalar;
+	}
+	return result;
+}
+
 - (double)dotProduct:(Vector*)vector
 {
 	NSAssert((self.dimensions != vector.dimensions), @"Cannot compute dot product with vectors of unequal dimensions");

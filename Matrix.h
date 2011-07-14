@@ -21,17 +21,17 @@
 @property (readonly) NSUInteger columns;
 
 // Boolean Properties
-- (bool)isSquare;
-- (bool)isDiagonal;
-- (bool)isSymmetric;
-- (bool)isOrthogonal;
-- (bool)isInvertible;
-- (bool)isZero;
-- (bool)isEmpty;
+- (BOOL)isSquare;
+- (BOOL)isDiagonal;
+- (BOOL)isSymmetric;
+- (BOOL)isOrthogonal;
+- (BOOL)isInvertible;
+- (BOOL)isZero;
+- (BOOL)isEmpty;
 
 // Comparison Functions
-- (bool)isEqualToMatrix:(Matrix *)matrix;
-- (bool)isEqualToElements:(double*)elementArray rows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
+- (BOOL)isEqualToMatrix:(Matrix *)matrix;
+- (BOOL)isEqualToElements:(double*)elementArray rows:(NSUInteger)numberOfRows columns:(NSUInteger)numberOfColumns;
 
 // Accessors
 - (Matrix*)row:(NSUInteger)rowNumber;
