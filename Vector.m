@@ -61,5 +61,27 @@
 	return self.elements[d];
 }
 
+#pragma mark Utility
+- (NSString*)description{
+	NSMutableString* str = [NSMutableString new];
+	[str appendString:@"Vector:\n"];
+	[str appendString:@"   ["];
+	for(NSUInteger d = 0; d < dimensions; d++){
+		[str appendFormat:@"% 4.4g", elements[d]];
+		if(d+1 != dimensions)
+			[str appendString:@","];
+	}
+	[str appendString:@"]"];
+	[str autorelease];
+	return str;
+}
+
+- (void)dealloc
+{
+	if(elements) free(elements);
+    [super dealloc];
+}
+
+
 
 @end
