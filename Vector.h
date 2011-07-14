@@ -7,11 +7,15 @@
 //
 
 #pragma once
-#import "Matrix.h"
+#import <Cocoa/Cocoa.h>
 
 
-@interface Vector : Matrix {}
+@interface Vector : NSObject {
+	NSUInteger dimensions;
+	double* elements;
+}
 
+@property (readonly) double* elements;
 @property (readonly) NSUInteger dimensions;
 @property (readonly) double length;
 

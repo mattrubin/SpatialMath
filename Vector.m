@@ -12,10 +12,8 @@
 @implementation Vector
 
 #pragma mark Properties
-- (NSUInteger)dimensions
-{
-	return self.rows;
-}
+@synthesize elements, dimensions;
+
 - (double)length
 {
 	double sum = 0.0;
@@ -29,7 +27,8 @@
 - (id)init
 {
 	if ((self = [super init])) {
-		columns = 1;
+		dimensions = 0;
+		elements = NULL;
 	}
 	return self;
 }
@@ -49,18 +48,18 @@
 }
 - (bool)isEqualToVector:(Vector *)vector
 {
-	return [self isEqualToMatrix:vector];
+	return (self.dimensions==vector.dimensions && memcmp(self.elements, vector.elements, sizeof(double)*self.dimensions)==0);
 }
 - (bool)isEqualToElements:(double*)e dimensions:(NSUInteger)d
 {
-	return [self isEqualToElements:e rows:d columns:1];
+	return (self.dimensions==d && memcmp(self.elements, e, sizeof(double)*self.dimensions)==0);
 }
 
 
 #pragma mark Accessors
 - (double)element:(NSUInteger)d
 {
-	return [self elementAtRow:d column:1];
+	return self.elements[d];
 }
 
 

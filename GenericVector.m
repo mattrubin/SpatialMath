@@ -15,15 +15,15 @@
 - (id)initWithDimensions:(NSUInteger)d
 {
 	if((self = [self init])){
-		rows = d;
-		elements = (double*)calloc(rows*columns, sizeof(double));
+		dimensions = d;
+		elements = (double*)calloc(dimensions, sizeof(double));
 	}
 	return self;
 }
 - (id)initWithDimensions:(NSUInteger)d elements:(double*)e
 {
 	if((self = [self initWithDimensions:d])){
-		for(int i = 0; i < rows; i++){
+		for(int i = 0; i < dimensions; i++){
 			elements[i] = e[i];
 		}
 	}
@@ -32,7 +32,7 @@
 - (id)initWithVector:(Vector*)v
 {
 	if((self = [self initWithDimensions:v.dimensions])){
-		for(int i = 0; i < rows; i++){
+		for(int i = 0; i < dimensions; i++){
 			elements[i] = v.elements[i];
 		}
 	}
