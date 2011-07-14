@@ -1,5 +1,5 @@
 //
-//  Test_Vector3.h
+//  Test_Vector4.h
 //  SpatialMath
 //
 //  Created by Matt Rubin on 7/14/11.
@@ -8,6 +8,6 @@
 
 #import "TestBundle.h"
 
-@interface Test_Vector3 : SenTestCase
+@interface Test_Vector4 : SenTestCase
 
 @end

@@ -15,7 +15,7 @@
 - (id)init
 {
 	if ((self = [super init])) {
-		dimensions = 3;
+		dimensions = 4;
 		elements = (double*)calloc(dimensions, sizeof(double));
 	}
 	return self;
