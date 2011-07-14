@@ -20,6 +20,41 @@
 	}
 	return self;
 }
+- (id)initWithElements:(double*)e
+{
+	if ((self = [self init])) {
+		elements[0] = e[0];
+		elements[1] = e[1];
+		elements[2] = e[2];
+		elements[3] = e[3];
+	}
+	return self;
+}
+- (id)initWithVector:(Vector4*)v
+{
+	if ((self = [self init])) {
+		elements[0] = v.elements[0];
+		elements[1] = v.elements[1];
+		elements[2] = v.elements[2];
+		elements[3] = v.elements[3];
+	}
+	return self;
+}
+
+#pragma mark Generators
++ (id)vector
+{
+	return [[[Vector4 alloc] init] autorelease];
+}
++ (id)vectorWithElements:(double*)e
+{
+	return [[[Vector4 alloc] initWithElements:e] autorelease];
+}
++ (id)vectorWithVector:(Vector4*)v
+{
+	return [[[Vector4 alloc] initWithVector:v] autorelease];
+}
+
 
 #pragma mark Setters and Getters
 - (double)x {

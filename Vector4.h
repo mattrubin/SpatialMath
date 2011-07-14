@@ -17,4 +17,13 @@
 @property (assign) double z;
 @property (assign) double w;
 
+// Initializers
+- (id)initWithElements:(double*)e;
+- (id)initWithVector:(Vector4*)v;
+
+// Generators
++ (id)vector;
++ (id)vectorWithElements:(double*)e;
++ (id)vectorWithVector:(Vector4*)v;
+
 @end

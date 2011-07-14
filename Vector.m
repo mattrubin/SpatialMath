@@ -7,7 +7,6 @@
 //
 
 #import "Vector.h"
-#import "GenericVector.h"
 
 @implementation Vector
 
