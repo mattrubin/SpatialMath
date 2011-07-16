@@ -19,6 +19,8 @@
 		C963B3E81345A1E7008AC4F7 /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = C963B3E61345A1E7008AC4F7 /* Transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C963B3E91345A1E7008AC4F7 /* Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = C963B3E71345A1E7008AC4F7 /* Transform.m */; };
 		C96B65E1134BC0D300967B3B /* Test_GenericVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C96B65E0134BC0D300967B3B /* Test_GenericVector.m */; };
+		C972FB3E13D236EB006FEAC1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C972FB3D13D236EB006FEAC1 /* Accelerate.framework */; };
+		C972FB4113D23F84006FEAC1 /* Test_VectorOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FB4013D23F84006FEAC1 /* Test_VectorOperations.m */; };
 		C989756612EBBC0B00B831A3 /* SpatialMath.h in Headers */ = {isa = PBXBuildFile; fileRef = C989756512EBBC0B00B831A3 /* SpatialMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C997CCDF13CF7F9200752F4E /* Test_Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = C997CCDE13CF7F9200752F4E /* Test_Vector3.m */; };
 		C997CCE213CF811D00752F4E /* Test_Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = C997CCE113CF811C00752F4E /* Test_Vector2.m */; };
@@ -76,6 +78,9 @@
 		C963B3E71345A1E7008AC4F7 /* Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transform.m; sourceTree = "<group>"; };
 		C96B65DF134BC0D300967B3B /* Test_GenericVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_GenericVector.h; sourceTree = "<group>"; };
 		C96B65E0134BC0D300967B3B /* Test_GenericVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_GenericVector.m; sourceTree = "<group>"; };
+		C972FB3D13D236EB006FEAC1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C972FB3F13D23F84006FEAC1 /* Test_VectorOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_VectorOperations.h; sourceTree = "<group>"; };
+		C972FB4013D23F84006FEAC1 /* Test_VectorOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_VectorOperations.m; sourceTree = "<group>"; };
 		C989756512EBBC0B00B831A3 /* SpatialMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpatialMath.h; sourceTree = "<group>"; };
 		C997CCDD13CF7F9200752F4E /* Test_Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Vector3.h; sourceTree = "<group>"; };
 		C997CCDE13CF7F9200752F4E /* Test_Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_Vector3.m; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C972FB3E13D236EB006FEAC1 /* Accelerate.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				C972FB3D13D236EB006FEAC1 /* Accelerate.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -269,6 +276,8 @@
 				C997CCDE13CF7F9200752F4E /* Test_Vector3.m */,
 				C997CCE613CF8FB300752F4E /* Test_Vector4.h */,
 				C997CCE713CF8FB400752F4E /* Test_Vector4.m */,
+				C972FB3F13D23F84006FEAC1 /* Test_VectorOperations.h */,
+				C972FB4013D23F84006FEAC1 /* Test_VectorOperations.m */,
 			);
 			name = Vectors;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 				C997CCDF13CF7F9200752F4E /* Test_Vector3.m in Sources */,
 				C997CCE213CF811D00752F4E /* Test_Vector2.m in Sources */,
 				C997CCE813CF8FB400752F4E /* Test_Vector4.m in Sources */,
+				C972FB4113D23F84006FEAC1 /* Test_VectorOperations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "Vector.h"
 #import "GenericVector.h"
+#import <Accelerate/Accelerate.h>
 
 
 @implementation Vector (VectorOperations)
@@ -46,13 +47,11 @@
 
 - (double)dotProduct:(Vector*)vector
 {
-	NSAssert((self.dimensions != vector.dimensions), @"Cannot compute dot product with vectors of unequal dimensions");
-	
-	double sum = 0.0;
-	for(NSUInteger i=0; i<self.dimensions; i++)
-		sum += self.elements[i]*vector.elements[i];
-	return sum;
+	NSAssert((self.dimensions == vector.dimensions), @"Cannot compute dot product with vectors of unequal dimensions");
+	return cblas_ddot(self.dimensions, self.elements, 1, vector.elements, 1);
 }
+
+
 
 - (Vector*)crossProduct:(Vector*)vector
 {
@@ -73,7 +72,7 @@
 	}
 	return result;
 }
-- (Vector*)versor
+- (Vector*)unitVector
 {
 	double l = self.length;
 	Vector *vector = [GenericVector vectorWithVector:self];

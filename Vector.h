@@ -34,7 +34,7 @@
 
 @interface Vector (VectorOperations)
 
-- (Vector*)versor; // unitVector? normalize?
+- (Vector*)unitVector; // versor? normalize?
 - (Vector*)opposite;
 
 - (Vector*)addVector:(Vector*)vector;
