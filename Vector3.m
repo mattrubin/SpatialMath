@@ -38,6 +38,15 @@
 	}
 	return self;
 }
+- (id)initWithX:(double)x y:(double)y z:(double)z
+{
+	if ((self = [self init])) {
+		elements[0] = x;
+		elements[1] = y;
+		elements[2] = z;
+	}
+	return self;
+}
 
 #pragma mark Generators
 + (id)vector
@@ -51,6 +60,10 @@
 + (id)vectorWithVector:(Vector3*)v
 {
 	return [[[Vector3 alloc] initWithVector:v] autorelease];
+}
++ (id)vectorWithX:(double)x y:(double)y z:(double)z
+{
+	return [[[Vector3 alloc] initWithX:x y:y z:z] autorelease];
 }
 
 

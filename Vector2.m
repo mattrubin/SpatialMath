@@ -36,6 +36,15 @@
 	}
 	return self;
 }
+- (id)initWithX:(double)x y:(double)y
+{
+	if ((self = [self init])) {
+		elements[0] = x;
+		elements[1] = y;
+	}
+	return self;
+}
+
 
 #pragma mark Generators
 + (id)vector
@@ -49,6 +58,10 @@
 + (id)vectorWithVector:(Vector2*)v
 {
 	return [[[Vector2 alloc] initWithVector:v] autorelease];
+}
++ (id)vectorWithX:(double)x y:(double)y
+{
+	return [[[Vector2 alloc] initWithX:x y:y] autorelease];
 }
 
 

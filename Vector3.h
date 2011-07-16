@@ -19,10 +19,12 @@
 // Initializers
 - (id)initWithElements:(double*)e;
 - (id)initWithVector:(Vector3*)v;
+- (id)initWithX:(double)x y:(double)y z:(double)z;
 
 // Generators
 + (id)vector;
 + (id)vectorWithElements:(double*)e;
 + (id)vectorWithVector:(Vector3*)v;
++ (id)vectorWithX:(double)x y:(double)y z:(double)z;
 
 @end
