@@ -20,6 +20,8 @@
 @property (readonly) double length; // magnitude? norm?
 
 - (BOOL)isUnitVector;
+- (BOOL)isZeroVector; //isNullVector?
+
 - (BOOL)isOrthogonalToVector:(Vector*)v;
 - (BOOL)isEqualToVector:(Vector *)vector;
 - (BOOL)isEqualToElements:(double*)e dimensions:(NSUInteger)d;
@@ -32,13 +34,14 @@
 
 @interface Vector (VectorOperations)
 
-- (Vector*)versor;
+- (Vector*)versor; // unitVector? normalize?
 - (Vector*)opposite;
 
 - (Vector*)addVector:(Vector*)vector;
 - (Vector*)subtractVector:(Vector*)vector;
 - (Vector*)multiplyByScalar:(double)scalar;
 
-- (double)dotProduct:(Vector*)vector;
+- (double)dotProduct:(Vector*)vector; //innerProduct? scalarProduct?
+- (Vector*)crossProduct:(Vector*)vector; //currently only supports 3d vectors. future support for 7d vectors?
 
 @end

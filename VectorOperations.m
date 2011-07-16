@@ -54,6 +54,17 @@
 	return sum;
 }
 
+- (Vector*)crossProduct:(Vector*)vector
+{
+	if(self.dimensions != 3) return nil;
+	if(self.dimensions != vector.dimensions) return nil;
+	Vector* result = [GenericVector vectorWithDimensions:self.dimensions];
+	result.elements[0] = self.elements[1]*vector.elements[2]-self.elements[2]*vector.elements[1];
+	result.elements[1] = self.elements[2]*vector.elements[0]-self.elements[0]*vector.elements[2];
+	result.elements[2] = self.elements[0]*vector.elements[1]-self.elements[1]*vector.elements[0];
+	return result;
+}
+
 - (Vector*)opposite
 {
 	Vector* result = [GenericVector vectorWithDimensions:self.dimensions];

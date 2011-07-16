@@ -38,7 +38,13 @@
 {
 	return self.length==1;
 }
-
+- (BOOL)isZeroVector
+{
+	for(NSUInteger i=0; i<dimensions; i++){
+		if([self element:i]!=0.0) return FALSE;
+	}
+	return TRUE;
+}
 
 #pragma mark Comparison Functions
 - (BOOL)isOrthogonalToVector:(Vector*)v
